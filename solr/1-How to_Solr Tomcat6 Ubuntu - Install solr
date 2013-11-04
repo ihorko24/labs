@@ -1,0 +1,44 @@
+
+1. $ sudo apt-get install tomcat6-admin
+
+2. Download and untar solr 4.X.X to /usr/share/solr
+
+3. sudo cp /usr/share/solr/example/webapps/solr.war /var/lib/tomcat6/webapps/solr.war
+
+4. sudo cp /usr/share/solr/example/lib/ext/*.jar /usr/share/tomcat6/lib/
+
+5.
+
+$gedit /usr/share/solr/example/resources/log4j.properties
+
+
+#  Logging level
+solr.log=/usr/share/solr/logs/
+log4j.rootLogger=INFO, file, CONSOLE
+
+$sudo cp /usr/share/solr/example/resources/log4j.properties /usr/share/tomcat6/lib
+
+6.
+$ cd /etc/tomcat6/Catalina/localhost
+
+$sudo gedit solr.xml
+
+<Context docBase="/var/lib/tomcat6/webapps/solr.war" debug="0" crossContext="true">
+ <Environment name="solr/home" type="java.lang.String" value="/usr/share/solr/example/solr" override="true" />
+</Context>
+
+7. $ sudo gedit /etc/tomcat6/tomcat-users.xml
+
+<tomcat-users>
+<role rolename="manager-gui"/>
+<user username="tomcat" password="secret" roles="manager-gui"/>
+</tomcat-users>
+
+
+8. 
+$ chmod -R ug+rw collection1
+$ sudo service tomcat6 restart
+
+9. Fllow the link:
+http://localhost:8080/solr/#/
+

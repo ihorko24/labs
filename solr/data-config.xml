@@ -1,0 +1,17 @@
+<dataConfig>
+ <dataSource type="JdbcDataSource"
+ driver="com.mysql.jdbc.Driver"
+ url="jdbc:mysql://127.0.0.1/bzoom"
+ user="user"
+ password="password!"
+ />
+ <document>
+ <entity name="id"
+ query="SELECT id, description, building_type, job_value FROM permits;">
+ <field column="id" name="id"/>
+ <field column="description" name="description"/>
+ <field column="building_type" name="building_type"/>
+ <field column="job_value" name="job_value"/>
+ </entity>
+ </document>
+</dataConfig>

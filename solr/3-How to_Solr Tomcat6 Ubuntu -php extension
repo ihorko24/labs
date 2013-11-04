@@ -1,0 +1,15 @@
+0. $ sudo apt-get install solr_tomcat
+
+pecl/solr Php extension:
+
+1.  Requirements:
+
+$ sudo apt-get install libcurl4-gnutls-dev
+$ sudo apt-get install libxml2-dev
+$ sudo apt-get install php-pear
+$ sudo apt-get install php5-curl
+
+2. Install solr extension: 
+
+$sudo pear install pecl/solr
+

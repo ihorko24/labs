@@ -1,0 +1,47 @@
+MySQL Data Import 
+
+1. Download the JDBC driver for MySQL from here http://dev.mysql.com/downloads/connector/j/, untar.
+
+2. Copy jar file in the tomcat lib folder /usr/share/tomcat6/lib:
+
+//curriki@Curriki:~/Downloads/mysql-connector-java-5.1.26
+$ sudo cp mysql-connector-java-5.1.26-bin.jar /usr/share/tomcat6/lib/
+
+3. Edit the /usr/share/solr/example/solr/collection1/conf/solrconfig.xml file:
+
+$ sudo gedit /usr/share/solr/example/solr/collection1/conf/solrconfig.xml
+
+
+Add the following:
+
+<lib dir="../../../dist/" regex="solr-dataimporthandler-.*.jar" />
+<lib dir="../../../dist/" regex="solr-dataimporthandler-extras-.*.jar" />
+<requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
+ <lst name="defaults">
+ <str name="config">data-config.xml</str>
+ </lst>
+</requestHandler>
+
+
+4. Create the file data-config.xml with fields particular for your db schema:
+
+$ sudo gedit /usr/share/solr/example/solr/collection1/conf/data-config.xml
+
+<dataConfig>
+ <dataSource type="JdbcDataSource"
+ driver="com.mysql.jdbc.Driver"
+ url="jdbc:mysql://127.0.0.1/bzoom"
+ user="user"
+ password="password"
+ />
+ <document>
+ <entity name="id"
+ query="SELECT id, description, building_type, job_value FROM permits;">
+ <field column="id" name="id"/>
+ <field column="description" name="description"/>
+ <field column="building_type" name="building_type"/>
+ <field column="job_value" name="job_value"/>
+ </entity>
+ </document>
+</dataConfig>
+
