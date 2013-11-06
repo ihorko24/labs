@@ -1,0 +1,61 @@
+{
+    "id" : 182,
+    "title" : "Senior Backbone JS Engineer",
+    "created_at" : "2011-12-12T10:51:44Z",
+    "updated_at" : "2013-03-13T08:12:13Z",
+    "equity_cliff" : 1,
+    "equity_min" : 1,
+    "equity_max" : 2,
+    "equity_vest" : 4,
+    "salary_min" : 60000,
+    "salary_max" : 60000,
+    "angellist_url" : "https://angel.co/jobs?startup_id=10310",
+    "tags" : [
+        {
+            "id" : 14781,
+            "tag_type" : "SkillTag",
+            "name" : "javascript",
+            "display_name" : "Javascript",
+            "angellist_url" : "https://angel.co/javascript"
+        },
+        {
+            "id" : 33096,
+            "tag_type" : "SkillTag",
+            "name" : "backbone.js",
+            "display_name" : "Backbone.js",
+            "angellist_url" : "https://angel.co/backbone-js"
+        },
+        {
+            "id" : 1692,
+            "tag_type" : "LocationTag",
+            "name" : "san francisco",
+            "display_name" : "San Francisco",
+            "angellist_url" : "https://angel.co/san-francisco"
+        },
+        {
+            "id" : 14726,
+            "tag_type" : "RoleTag",
+            "name" : "developer",
+            "display_name" : "Developer",
+            "angellist_url" : "https://angel.co/developer"
+        }
+    ],
+    "startup" : {
+        "id" : 10310,
+        "hidden" : false,
+        "community_profile" : false,
+        "name" : "Gizmo",
+        "angellist_url" : "https://angel.co/gizmo",
+        "logo_url" : "https://s3.amazonaws.com/photos.angel.co/startups/i/10310-e12aeccfa4877f9716f3483fa84fc38a-medium_jpg.jpg?buster=1316500452",
+        "thumb_url" : "https://s3.amazonaws.com/photos.angel.co/startups/i/10310-e12aeccfa4877f9716f3483fa84fc38a-thumb_jpg.jpg?buster=1316500452",
+        "quality" : 7,
+        "product_desc" : "Gizmo gives brands, agencies, and independentcreatives the ability to engage their consumers on multiple platforms. Consumersexpect your brand to be on as many platforms as they are, however management atscale is nearly impossible. Gizmo solves this by centralizing creation, publishing, and management of all these platforms, from the cloud.\n\nGizmo is currently in beta with Fortune 100 companies, and large ad agencies. Our pre-beta product was monetized to $105k in early revenue. ",
+        "high_concept" : "App Marketing Infrastructure & Automation",
+        "follower_count" : 283,
+        "company_url" : "http://gizmo.com",
+        "created_at" : "2011-03-26T04:56:28Z",
+        "updated_at" : "2013-06-26T21:47:53Z"
+    },
+    "_id" : 182,
+    "ts" : "2013-10-11T13:02:25.898Z"
+}

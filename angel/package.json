@@ -1,0 +1,18 @@
+{
+  "name": "import_jobs",
+  "version": "0.0.1",
+  "description": "angelco jobs",
+  "main": "new.js",
+  "dependencies": {
+    "request": ">=0.5.0",
+    "mongodb": ">=1.3.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Igor T",
+  "license": "BSD",
+  "private": true
+}
